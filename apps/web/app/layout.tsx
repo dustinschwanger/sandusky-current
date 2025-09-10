@@ -1,5 +1,5 @@
 import './globals.css'
-import { ScannerProvider } from '../contexts/ScannerContext'
+import { ChatProvider } from '@/contexts/ChatContext'
 
 export const metadata = {
   title: 'Sandusky Current',
@@ -14,9 +14,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ScannerProvider>
+        <ChatProvider>
           {children}
-        </ScannerProvider>
+        </ChatProvider>
       </body>
     </html>
   )
