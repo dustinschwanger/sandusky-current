@@ -1,4 +1,5 @@
 import './globals.css'
+import { ScannerProvider } from '../contexts/ScannerContext'
 
 export const metadata = {
   title: 'Sandusky Current',
@@ -12,7 +13,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ScannerProvider>
+          {children}
+        </ScannerProvider>
+      </body>
     </html>
   )
 }

@@ -1,4 +1,4 @@
-import StatsCard from '../components/StatsCard'
+import StatsBar from '../components/StatsBar'
 import IncidentFeed from '../components/IncidentFeed'
 import ScannerPlayer from '../components/ScannerPlayer'
 import NewsCard from '../components/NewsCard'
@@ -23,11 +23,7 @@ export default function HomePage() {
           {/* Main Content - Left Side */}
           <div className="lg:col-span-2 space-y-6">
             {/* Stats Bar */}
-            <div className="grid grid-cols-3 gap-4">
-            <StatsCard label="Today's Incidents" value={12} trend="up" />
-            <StatsCard label="Active Units" value={3} trend="neutral" />
-            <StatsCard label="Scanner Listeners" value={47} trend="up" />
-            </div>
+            <StatsBar />
 
             {/* Map Placeholder */}
             <div className="bg-white rounded-lg shadow p-4 h-96">
@@ -61,8 +57,8 @@ export default function HomePage() {
             </div>
 
           {/* Sidebar - Right Side */}
-          <div className="space-y-6">
-           {/* Scanner Player */}
+            <div className="space-y-6">
+            {/* Scanner Player */}
             <ScannerPlayer />
 
             {/* Recent Incidents */}
@@ -70,7 +66,7 @@ export default function HomePage() {
             <h2 className="text-lg font-semibold mb-3">Recent Incidents</h2>
             <IncidentFeed />
             </div>
-          </div>
+            </div>
         </div>
       </div>
     </main>
